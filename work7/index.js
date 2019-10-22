@@ -3,7 +3,7 @@ function sort(method){
     let logs
     console.log(method)
     if(method=='bubble'){
-        logs = bubbleSort(origin)
+       logs = bubbbleSort(origin)
     }else if(method=='insert'){
         logs = insertSort(origin)
     }
