@@ -4,7 +4,7 @@ function monkey(){
     total = parseInt(total) && Number(total)
     kick = parseInt(kick) && Number(kick)
     if(isNaN(total)||isNaN(kick)){
-        alert('请输入数字')
+        alert('请你输入数字')
         return
     }
     let monkey=[]
