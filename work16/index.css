@@ -1,0 +1,40 @@
+.box {
+    width: 350px;
+    height: 350px;
+    border: 1px solid#ccc;
+    position: relative;
+}
+
+.big {
+    width: 480px;
+    height: 480px;
+    position: relative;
+    top: 0;
+    left: 360px;
+    border: 1ox solid#ccc;
+    overflow: hidden;
+    display: none
+}
+
+.mask {
+    width: 175px;
+    height: 175px;
+    background: rgba(255,255, .4);
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: move;
+    display: none;
+}
+
+.samll {
+    position: relative;
+}
+
+.box img {
+    vertical-align: top;
+}
+
+#bigBox img {
+    position: absolute;
+}
