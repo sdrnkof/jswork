@@ -1,21 +1,20 @@
-let ws
+let ws 
 function connect() {
-    let server = document.getElementById('server').value
+    let server = document.getElementById('server').value 
     ws = new WebSocket(server);
     ws.onopen = function() {
-        document.getElementById('conn').disabled='disable';
-        document.getElementById('disconn').disabled='';
-        let nickname=document.getElementById('nickname').value
-        if(nickname){
-            ws.send('nickname|'+nickname)
-        }
-
+       document.getElementById('conn').disabled='disabled';
+       document.getElementById('disconn').disabled='';
+       let nickname=document.getElementById('nickname').value
+       if(nickname){
+           ws.send('nickname|'+nickname)
+       } 
     }
     ws.onclose = function(){
-        document.getElementById('conn').disabled='';
-        document.getElementById('disconn').disabled= 'disable';
+        document.getElementById('conn').disable='';
+        document.getElementById('disconn').disable='disable';
     }
-    ws.onmessage=function(event){
+    ws.onmessage=function(){
         let board = document.getElementById('board')
         let newmsg = document.createElement('div')
         console.log(event.data)
@@ -23,13 +22,15 @@ function connect() {
         board.appendChild(newmsg)
         board.scrollTop = board.scrollHeight;
     }
-}
+} 
 
 function disconnect(){
     ws.close()
 }
 
-function send() {
+function send(){
     let msg = document.getElementById('content').value
     ws.send(msg)
 }
+        
+    
